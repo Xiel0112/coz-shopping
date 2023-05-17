@@ -6,6 +6,7 @@ import { ProuductsContext } from "../context/ProductsProvider";
 import ProductBrand from "../component/ProductBrand";
 import ProductExhibition from "../component/ProductExhibition";
 import ProductCategory from "../component/ProductCategory";
+import Modal from "../component/Modal";
 
 function Main() {
   const products = useContext(ProuductsContext);
@@ -54,6 +55,7 @@ function Main() {
             }
           })}
         </div>
+        <Modal />
         <div>
           <h2>북마크 리스트</h2>
           <Product />
