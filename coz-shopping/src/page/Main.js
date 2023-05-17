@@ -39,26 +39,32 @@ function Main() {
             }
             if (product.type === "Brand") {
               return (
-                <ProductBrand
-                  key={id}
-                  img={product.brand_image_url}
-                  title={product.brand_name}
-                  follower={product.follower}
-                />
+                <div key={id} onClick={handleOpenModal}>
+                  <ProductBrand
+                    key={id}
+                    img={product.brand_image_url}
+                    title={product.brand_name}
+                    follower={product.follower}
+                  />
+                </div>
               );
             }
             if (product.type === "Exhibition") {
               return (
-                <ProductExhibition
-                  key={id}
-                  img={product.image_url}
-                  title={product.title}
-                  sub_title={product.sub_title}
-                />
+                <div key={id} onClick={handleOpenModal}>
+                  <ProductExhibition
+                    key={id}
+                    img={product.image_url}
+                    title={product.title}
+                    sub_title={product.sub_title}
+                  />
+                </div>
               );
             }
             if (product.type === "Category") {
-              return <ProductCategory key={id} img={product.image_url} title={product.title} />;
+              <div key={id} onClick={handleOpenModal}>
+                <ProductCategory key={id} img={product.image_url} title={product.title} />
+              </div>;
             }
           })}
         </div>
