@@ -29,7 +29,6 @@ function Main() {
                 />
               );
             }
-
             if (product.type === "Brand") {
               return (
                 <ProductBrand
@@ -40,7 +39,6 @@ function Main() {
                 />
               );
             }
-
             if (product.type === "Exhibition") {
               return (
                 <ProductExhibition
@@ -51,7 +49,6 @@ function Main() {
                 />
               );
             }
-
             if (product.type === "Category") {
               return <ProductCategory key={id} img={product.image_url} title={product.title} />;
             }
