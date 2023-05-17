@@ -1,5 +1,3 @@
-import { useState } from "react";
-
 function Modal({ setModal }) {
   const handleCloseModal = () => {
     setModal(false);
