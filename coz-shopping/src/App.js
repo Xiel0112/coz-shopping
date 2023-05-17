@@ -3,7 +3,7 @@ import Main from "./page/Main";
 import ProductList from "./page/ProductList";
 import Bookmark from "./page/Bookmark";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import { ProductProvider } from "./context/ProuductProvider";
+import { ProductsProvider } from "./context/ProductsProvider";
 import { BookmarkProvider } from "./context/BookmarkProvider";
 
 function App() {
@@ -11,13 +11,34 @@ function App() {
     <div className="App">
       <Router>
         <Routes>
-          <BookmarkProvider>
-            <ProductProvider>
-              <Route path="/" element={<Main />} />
-              <Route path="/products/list" element={<ProductList />} />
-            </ProductProvider>
-            <Route path="/bookmark" element={<Bookmark />} />
-          </BookmarkProvider>
+          <Route
+            path="/"
+            element={
+              <ProductsProvider>
+                <BookmarkProvider>
+                  <Main />
+                </BookmarkProvider>
+              </ProductsProvider>
+            }
+          />
+          <Route
+            path="/products/list"
+            element={
+              <ProductsProvider>
+                <BookmarkProvider>
+                  <ProductList />
+                </BookmarkProvider>
+              </ProductsProvider>
+            }
+          />
+          <Route
+            path="/bookmark"
+            element={
+              <BookmarkProvider>
+                <Bookmark />
+              </BookmarkProvider>
+            }
+          />
         </Routes>
       </Router>
     </div>

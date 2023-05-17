@@ -1,5 +1,4 @@
 import bookmarkOff from "../icon/북마크 아이콘 - off.png";
-// import bookmarkOn from "../icon/북마크 아이콘 - on.png";
 import "../component/Product.css";
 
 const Product = () => {

@@ -1,22 +1,22 @@
 import { createContext, useEffect, useState } from "react";
-import { getProduct } from "../api/product";
+import { getProducts } from "../api/products";
 
-export const ProuductContext = createContext([]);
+export const ProuductsContext = createContext([]);
 
-export function ProductProvider({ children }) {
+export function ProductsProvider({ children }) {
   const [products, setProducts] = useState([]);
   const { isLoading, setIsLoading } = useState(true);
 
   useEffect(() => {
     (async () => {
-      setProducts(await getProduct());
+      setProducts(await getProducts());
       setIsLoading(false);
     })();
-  }, [setIsLoading]);
+  }, []);
 
   return (
-    <ProuductContext.Provider value={products}>
+    <ProuductsContext.Provider value={products}>
       {isLoading ? null : children}
-    </ProuductContext.Provider>
+    </ProuductsContext.Provider>
   );
 }

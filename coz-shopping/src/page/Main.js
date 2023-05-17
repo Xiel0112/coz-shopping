@@ -1,8 +1,12 @@
+import { useContext } from "react";
 import Footer from "../component/Footer";
 import Header from "../component/Header";
 import Product from "../component/Product";
+import { ProuductsContext } from "../context/ProductsProvider";
 
 const Main = () => {
+  const { products } = useContext(ProuductsContext);
+
   return (
     <div>
       <Header />
