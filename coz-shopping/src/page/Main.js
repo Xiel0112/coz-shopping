@@ -21,45 +21,45 @@ function Main() {
       <main>
         <div>
           <h2>상품 리스트</h2>
-          {productList.map((product, id) => {
-            if (product.type === "Product") {
-              return (
-                <div key={id} onClick={handleOpenModal}>
+          <div onClick={handleOpenModal}>
+            {productList.map((product, id) => {
+              if (product.type === "Product") {
+                return (
                   <Product
                     img={product.image_url}
                     title={product.title}
                     discountPercentage={product.discountPercentage}
                     price={product.price}
                   />
-                </div>
-              );
-            }
-            if (product.type === "Brand") {
-              return (
-                <ProductBrand
-                  key={id}
-                  img={product.brand_image_url}
-                  title={product.brand_name}
-                  follower={product.follower}
-                />
-              );
-            }
-            if (product.type === "Exhibition") {
-              return (
-                <ProductExhibition
-                  key={id}
-                  img={product.image_url}
-                  title={product.title}
-                  sub_title={product.sub_title}
-                />
-              );
-            }
-            if (product.type === "Category") {
-              return <ProductCategory key={id} img={product.image_url} title={product.title} />;
-            }
-          })}
+                );
+              }
+              if (product.type === "Brand") {
+                return (
+                  <ProductBrand
+                    key={id}
+                    img={product.brand_image_url}
+                    title={product.brand_name}
+                    follower={product.follower}
+                  />
+                );
+              }
+              if (product.type === "Exhibition") {
+                return (
+                  <ProductExhibition
+                    key={id}
+                    img={product.image_url}
+                    title={product.title}
+                    sub_title={product.sub_title}
+                  />
+                );
+              }
+              if (product.type === "Category") {
+                return <ProductCategory key={id} img={product.image_url} title={product.title} />;
+              }
+            })}
+          </div>
+          {modal && <Modal setModal={setModal} />}
         </div>
-        {modal && <Modal setModal={setModal} />}
         <div>
           <h2>북마크 리스트</h2>
           <Product />
