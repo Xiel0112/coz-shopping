@@ -1,7 +1,6 @@
 import bookmarkOff from "../icon/북마크 아이콘 - off.png";
-import "../component/Product.css";
 
-function Product({ img, title, discountPercentage, price }) {
+function ProductCategory({ img, title }) {
   return (
     <div>
       <div>
@@ -11,15 +10,15 @@ function Product({ img, title, discountPercentage, price }) {
       <div>
         <div>
           <span>{title}</span>
-          <span>{discountPercentage}%</span>
+          <span></span>
         </div>
         <div>
           <span></span>
-          <span>{price}원</span>
+          <span></span>
         </div>
       </div>
     </div>
   );
 }
 
-export default Product;
+export default ProductCategory;
