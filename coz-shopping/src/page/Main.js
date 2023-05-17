@@ -11,12 +11,9 @@ import Modal from "../component/Modal";
 function Main() {
   const products = useContext(ProuductsContext);
   const [modal, setModal] = useState(false);
-
-  const handleOpenModal = () => setModal(true);
-
   const productList = products.slice(0, 4);
 
-  console.log(modal);
+  const handleOpenModal = () => setModal(true);
 
   return (
     <div>
