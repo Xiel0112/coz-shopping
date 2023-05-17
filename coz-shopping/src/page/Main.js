@@ -1,4 +1,4 @@
-import { useContext } from "react";
+import { useContext, useState } from "react";
 import Footer from "../component/Footer";
 import Header from "../component/Header";
 import Product from "../component/Product";
@@ -10,7 +10,13 @@ import Modal from "../component/Modal";
 
 function Main() {
   const products = useContext(ProuductsContext);
+  const [modal, setModal] = useState(false);
+
+  const handleOpenModal = () => setModal(true);
+
   const productList = products.slice(0, 4);
+
+  console.log(modal);
 
   return (
     <div>
@@ -21,13 +27,14 @@ function Main() {
           {productList.map((product, id) => {
             if (product.type === "Product") {
               return (
-                <Product
-                  key={id}
-                  img={product.image_url}
-                  title={product.title}
-                  discountPercentage={product.discountPercentage}
-                  price={product.price}
-                />
+                <div key={id} onClick={handleOpenModal}>
+                  <Product
+                    img={product.image_url}
+                    title={product.title}
+                    discountPercentage={product.discountPercentage}
+                    price={product.price}
+                  />
+                </div>
               );
             }
             if (product.type === "Brand") {
@@ -55,7 +62,8 @@ function Main() {
             }
           })}
         </div>
-        <Modal />
+        {modal && <Modal setModal={setModal} />}
+
         <div>
           <h2>북마크 리스트</h2>
           <Product />
