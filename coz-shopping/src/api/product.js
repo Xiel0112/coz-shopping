@@ -1,3 +1,5 @@
-export const getProduct = (count) => {
-  return fetch(`http://cozshopping.codestates-seb.link/api/v1/products?count=${count}`);
+export const getProduct = () => {
+  return fetch(`http://cozshopping.codestates-seb.link/api/v1/products`).then((res) => {
+    return res.json();
+  });
 };
