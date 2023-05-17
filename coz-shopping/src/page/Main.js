@@ -39,36 +39,31 @@ function Main() {
             }
             if (product.type === "Brand") {
               return (
-                <div key={id} onClick={handleOpenModal}>
-                  <ProductBrand
-                    key={id}
-                    img={product.brand_image_url}
-                    title={product.brand_name}
-                    follower={product.follower}
-                  />
-                </div>
+                <ProductBrand
+                  key={id}
+                  img={product.brand_image_url}
+                  title={product.brand_name}
+                  follower={product.follower}
+                />
               );
             }
             if (product.type === "Exhibition") {
               return (
-                <div key={id} onClick={handleOpenModal}>
-                  <ProductExhibition
-                    key={id}
-                    img={product.image_url}
-                    title={product.title}
-                    sub_title={product.sub_title}
-                  />
-                </div>
+                <ProductExhibition
+                  key={id}
+                  img={product.image_url}
+                  title={product.title}
+                  sub_title={product.sub_title}
+                />
               );
             }
             if (product.type === "Category") {
-              <div key={id} onClick={handleOpenModal}>
-                <ProductCategory key={id} img={product.image_url} title={product.title} />
-              </div>;
+              return <ProductCategory key={id} img={product.image_url} title={product.title} />;
             }
           })}
         </div>
         {modal && <Modal setModal={setModal} />}
+
         <div>
           <h2>북마크 리스트</h2>
           <Product />
