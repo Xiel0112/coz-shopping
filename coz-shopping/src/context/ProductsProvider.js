@@ -5,7 +5,7 @@ export const ProuductsContext = createContext([]);
 
 export function ProductsProvider({ children }) {
   const [products, setProducts] = useState([]);
-  const { isLoading, setIsLoading } = useState(true);
+  const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
     (async () => {
