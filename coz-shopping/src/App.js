@@ -7,14 +7,13 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 function App() {
   return (
     <div className="App">
-      {/* <Router>
+      <Router>
         <Routes>
           <Route path="/" element={<Main />} />
           <Route path="/products/list" element={<ProductList />} />
           <Route path="/bookmark" element={<Bookmark />} />
         </Routes>
-      </Router> */}
-      <Bookmark />
+      </Router>
     </div>
   );
 }
