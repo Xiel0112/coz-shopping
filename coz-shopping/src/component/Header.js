@@ -5,12 +5,10 @@ import bookmark from "../icon/북마크 아이콘.png";
 import { Link } from "react-router-dom";
 import { useState } from "react";
 
-const Header = () => {
+function Header() {
   const [dropdown, setDropdown] = useState(false);
 
   const handleDropDown = () => setDropdown(!dropdown);
-
-  console.log(dropdown);
 
   const Dropdown = () => {
     return (
@@ -44,6 +42,6 @@ const Header = () => {
       {dropdown && <Dropdown />}
     </div>
   );
-};
+}
 
 export default Header;

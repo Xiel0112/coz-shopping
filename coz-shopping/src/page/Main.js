@@ -4,8 +4,9 @@ import Header from "../component/Header";
 import Product from "../component/Product";
 import { ProuductsContext } from "../context/ProductsProvider";
 
-const Main = () => {
-  const { products } = useContext(ProuductsContext);
+function Main() {
+  const products = useContext(ProuductsContext);
+  const productList = products.slice(0, 4);
 
   return (
     <div>
@@ -13,7 +14,20 @@ const Main = () => {
       <main>
         <div>
           <h2>상품 리스트</h2>
-          <Product />
+          {productList.map((product) => (
+            <Product
+              key={product.id}
+              type={product.type}
+              title={product.title}
+              sub_title={product.sub_title}
+              brand_name={product.brand_name}
+              price={product.price}
+              discountPercentage={product.discountPercentage}
+              image_url={product.image_url}
+              brand_image_url={product.brand_image_url}
+              follower={product.follower}
+            />
+          ))}
         </div>
         <div>
           <h2>북마크 리스트</h2>
@@ -23,6 +37,6 @@ const Main = () => {
       <Footer />
     </div>
   );
-};
+}
 
 export default Main;

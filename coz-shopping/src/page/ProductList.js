@@ -3,7 +3,7 @@ import Footer from "../component/Footer";
 import Header from "../component/Header";
 import Product from "../component/Product";
 
-const ProductList = () => {
+function ProductList() {
   return (
     <div>
       <Header />
@@ -18,6 +18,6 @@ const ProductList = () => {
       <Footer />
     </div>
   );
-};
+}
 
 export default ProductList;

@@ -1,7 +1,7 @@
 import bookmarkOff from "../icon/북마크 아이콘 - off.png";
 import "../component/Product.css";
 
-const Product = () => {
+function Product() {
   return (
     <div>
       <div>
@@ -24,6 +24,6 @@ const Product = () => {
       </div>
     </div>
   );
-};
+}
 
 export default Product;

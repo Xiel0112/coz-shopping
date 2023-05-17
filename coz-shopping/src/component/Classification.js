@@ -1,4 +1,4 @@
-const Classification = () => {
+function Classification() {
   return (
     <div>
       <img src="!!:" alt="카테고리" />
@@ -13,6 +13,6 @@ const Classification = () => {
       <div>브랜드</div>
     </div>
   );
-};
+}
 
 export default Classification;
