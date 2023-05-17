@@ -69,7 +69,6 @@ function Main() {
           })}
         </div>
         {modal && <Modal setModal={setModal} />}
-
         <div>
           <h2>북마크 리스트</h2>
           <Product />
