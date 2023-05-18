@@ -18,6 +18,8 @@ function ProductList() {
   const [modal, setModal] = useState(false);
   const [selectedType, setSelectedType] = useState("All");
 
+  const filterProducts = products.filter((product) => product.type === selectedType);
+
   return (
     <div>
       <Header />
