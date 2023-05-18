@@ -18,11 +18,7 @@ function Product({
   return (
     <div onClick={handleOpenModal}>
       <div>
-        <img
-          className="product"
-          src={type === "Brand" ? brand_image_url : image_url}
-          alt="product"
-        />
+        <img className="product" src={type === "Brand" ? brand_image_url : image_url} alt={title} />
         <img src={bookmarkOff} alt="bookmark" />
       </div>
       <div>
