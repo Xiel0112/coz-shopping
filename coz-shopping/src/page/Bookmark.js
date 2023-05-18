@@ -1,15 +1,15 @@
-import Classification from "../component/Classification";
+import FilterBtn from "../component/FilterBtn";
 import Footer from "../component/Footer";
 import Header from "../component/Header";
 import Product from "../component/Product";
 
-const Bookmark = () => {
+function Bookmark() {
   return (
     <div>
       <Header />
       <main>
         <div>
-          <Classification />
+          <FilterBtn />
         </div>
         <div>
           <Product />
@@ -18,6 +18,6 @@ const Bookmark = () => {
       <Footer />
     </div>
   );
-};
+}
 
 export default Bookmark;
