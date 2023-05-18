@@ -14,14 +14,16 @@ function Header() {
   const Dropdown = () => {
     return (
       <div className="modal">
-        <div className="modal-welcome">○○○님, 안녕하세요!</div>
+        <div className="modal-welcome">
+          <div className="welcome-text">○○○님, 안녕하세요!</div>
+        </div>
         <Link className="modal__productList" to={"/products/list"}>
           <img className="productList-icon" src={product} alt="상품" />
-          <div className="productList-text">상품 리스트</div>
+          <span className="productList-text">상품 리스트</span>
         </Link>
         <Link className="modal__bookmark" to={"/products/list"}>
           <img className="bookmark-icon" src={bookmark} alt="북마크" />
-          <div className="bookmark-text">북마크</div>
+          <span className="bookmark-text">북마크</span>
         </Link>
       </div>
     );
@@ -32,7 +34,7 @@ function Header() {
       <Link className="header__logo" to={"/"}>
         <img src={logo} alt="로고" />
       </Link>
-      <Link className="header_storeName" to={"/"} style={{textDecoration: "none"}}>
+      <Link className="header_storeName" to={"/"} style={{ textDecoration: "none" }}>
         <div>COZ Shopping</div>
       </Link>
       <img className="header__menu" src={menu} alt="메뉴" onClick={handleDropDown} />

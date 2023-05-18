@@ -1,5 +1,137 @@
 .header {
   position: sticky;
   top: 0px;
+
+  height: 80px;
+  width: 1280px;
+  border-radius: 0px;
+
+  background-color: white;
 }
 
+.header__logo {
+  position: absolute;
+  height: 30px;
+  width: 55px;
+  left: 76px;
+  top: 25px;
+  border-radius: 0px;
+}
+
+.header_storeName {
+  position: absolute;
+  height: 29.629629135131836px;
+  width: 230px;
+  left: 143px;
+  top: 25.1851806640625px;
+  border-radius: nullpx;
+
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 32px;
+  line-height: 88.02%;
+  /* or 28px */
+
+  display: flex;
+  align-items: center;
+
+  color: #000000;
+}
+
+.header__menu {
+  position: absolute;
+  height: 24px;
+  width: 34px;
+  left: 1170px;
+  top: 28px;
+  border-radius: 0px;
+}
+
+.modal {
+  position: absolute;
+  height: 150px;
+  width: 200px;
+  left: 0px;
+  top: 22px;
+  border-radius: 12px;
+
+  background-color: white;
+}
+
+.modal-welcome {
+  height: 50px;
+  width: 200px;
+  left: 0px;
+  top: 0px;
+  border-radius: 0px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.welcome-text {
+  height: 25px;
+  width: 180px;
+  left: 10px;
+  top: 13px;
+  border-radius: nullpx;
+}
+
+.modal__productList {
+  position: absolute;
+  height: 50px;
+  width: 200px;
+  left: 0px;
+  top: 50px;
+  border-radius: 0px;
+
+  display: flex;
+  align-items: center;
+}
+
+.productList-icon {
+  height: 20px;
+  width: 20px;
+  left: 24px;
+  top: 65px;
+  border-radius: 0px;
+}
+
+.productList-text {
+  height: 25px;
+  width: 140px;
+  left: 52px;
+  top: 63px;
+  border-radius: nullpx;
+}
+
+.modal__bookmark {
+  position: absolute;
+  height: 50px;
+  width: 200px;
+  left: 0px;
+  top: 100px;
+  border-radius: 0px;
+
+  display: flex;
+  align-items: center;
+}
+
+.bookmark-icon {
+  height: 20px;
+  width: 20px;
+  left: 24px;
+  top: 115px;
+  border-radius: 0px;
+}
+
+.bookmark-text {
+  height: 24px;
+  width: 140px;
+  left: 52px;
+  top: 113px;
+  border-radius: nullpx;
+}
