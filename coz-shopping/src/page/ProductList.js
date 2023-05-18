@@ -20,6 +20,8 @@ function ProductList() {
 
   const filterProducts = products.filter((product) => product.type === selectedType);
 
+  const handleOpenModal = () => setModal(true);
+
   return (
     <div>
       <Header />
@@ -47,10 +49,11 @@ function ProductList() {
               image_url={product.image_url}
               brand_image_url={product.brand_image_url}
               follower={product.follower}
+              handleOpenModal={handleOpenModal}
+              modal={modal}
             />
           ))}
         </div>
-        {modal && <Modal setModal={setModal} />}
       </main>
       <Footer />
     </div>
