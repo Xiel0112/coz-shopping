@@ -16,13 +16,8 @@ const typeFilter = [
 function ProductList() {
   const products = useContext(ProuductsContext);
   const [modal, setModal] = useState(false);
-  // const [filter, setFilter] = useState("All");
 
   const handleOpenModal = () => setModal(true);
-  // const handleFilter = (e) => {
-  //   const selectedType = e.target.value;
-
-  // };
 
   return (
     <div>
