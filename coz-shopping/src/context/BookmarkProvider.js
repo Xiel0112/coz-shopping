@@ -16,6 +16,8 @@ export function BookmarkProvider({ children }) {
     }
   };
 
+  console.log(bookmark);
+
   return (
     <BookmarkContext.Provider value={{ bookmark, onClickBookmark }}>
       {children}

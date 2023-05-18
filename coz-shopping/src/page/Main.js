@@ -4,9 +4,12 @@ import Header from "../component/Header";
 import Product from "../component/Product";
 import { ProuductsContext } from "../context/ProductsProvider";
 import Modal from "../component/Modal";
+import { BookmarkContext } from "../context/BookmarkProvider";
 
 function Main() {
   const products = useContext(ProuductsContext);
+  const bookmark = useContext(BookmarkContext);
+  const { onClickBookmark } = useContext(BookmarkContext);
   const [modal, setModal] = useState(false);
   const productList = products.slice(0, 4);
 
