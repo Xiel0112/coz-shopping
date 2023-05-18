@@ -1,25 +1,37 @@
 .header {
   position: sticky;
   top: 0px;
+
   width: 1280px;
   height: 80px;
 
   background: #ffffff;
   box-shadow: 0px 8px 8px rgba(0, 0, 0, 0.1);
+
+  /* Inside auto layout */
+
+  flex: none;
+  order: 0;
+  flex-grow: 0;
 }
 
 .header__logo {
   position: absolute;
-  top: 25px;
-  left: 76px;
+  left: 5.94%;
+  right: 89.77%;
+  top: 31.25%;
+  bottom: 31.25%;
 }
 
 .header_storeName {
   position: absolute;
-  top: 25.19px;
-  left: 143px;
+  left: 11.17%;
+  right: 70.86%;
+  top: 31.48%;
+  bottom: 31.48%;
 
   font-family: "Inter";
+  font-style: normal;
   font-weight: 700;
   font-size: 32px;
   line-height: 88.02%;
@@ -33,8 +45,10 @@
 
 .header__menu {
   position: absolute;
-  top: 30px;
-  right: 78px;
+  width: 34px;
+  height: 24px;
+  left: 1170px;
+  top: 28px;
 }
 
 .modal {

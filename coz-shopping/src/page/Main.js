@@ -15,7 +15,7 @@ function Main() {
   const productList = products.slice(0, 4);
 
   return (
-    <div>
+    <div className="main">
       <Header />
       <main>
         <div>

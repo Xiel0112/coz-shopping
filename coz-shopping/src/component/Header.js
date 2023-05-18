@@ -32,7 +32,7 @@ function Header() {
       <Link className="header__logo" to={"/"}>
         <img src={logo} alt="로고" />
       </Link>
-      <Link className="header_storeName" to={"/"}>
+      <Link className="header_storeName" to={"/"} style={{ textDecoration: "none" }}>
         <div>COZ Shopping</div>
       </Link>
       <img className="header__menu" src={menu} alt="메뉴" onClick={handleDropDown} />
