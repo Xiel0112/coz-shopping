@@ -17,28 +17,26 @@ function Main() {
   return (
     <div className="main">
       <Header />
-      <main>
-        <div>
-          <h2 className="title-productList">상품 리스트</h2>
-          <div>
-            {productList.map((product, id) => (
-              <Product
-                key={id}
-                type={product.type}
-                title={product.title}
-                sub_title={product.sub_title}
-                brand_name={product.brand_name}
-                price={product.price}
-                discountPercentage={product.discountPercentage}
-                image_url={product.image_url}
-                brand_image_url={product.brand_image_url}
-                follower={product.follower}
-                handleOpenModal={handleOpenModal}
-              />
-            ))}
-          </div>
-          {modal && <Modal setModal={setModal} />}
+      <main className="main__content">
+        <h2 className="product-list-title">상품 리스트</h2>
+        <div className="product-list__products">
+          {productList.map((product, id) => (
+            <Product
+              key={id}
+              type={product.type}
+              title={product.title}
+              sub_title={product.sub_title}
+              brand_name={product.brand_name}
+              price={product.price}
+              discountPercentage={product.discountPercentage}
+              image_url={product.image_url}
+              brand_image_url={product.brand_image_url}
+              follower={product.follower}
+              handleOpenModal={handleOpenModal}
+            />
+          ))}
         </div>
+        {modal && <Modal setModal={setModal} />}
         <div>
           <h2>북마크 리스트</h2>
           <Product />
