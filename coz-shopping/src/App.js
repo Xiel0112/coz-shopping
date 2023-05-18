@@ -10,36 +10,17 @@ function App() {
   return (
     <div className="App">
       <Router>
-        <Routes>
-          <Route
-            path="/"
-            element={
-              <ProductsProvider>
-                <BookmarkProvider>
-                  <Main />
-                </BookmarkProvider>
-              </ProductsProvider>
-            }
-          />
-          <Route
-            path="/products/list"
-            element={
-              <ProductsProvider>
-                <BookmarkProvider>
-                  <ProductList />
-                </BookmarkProvider>
-              </ProductsProvider>
-            }
-          />
-          <Route
-            path="/bookmark"
-            element={
-              <BookmarkProvider>
-                <Bookmark />
-              </BookmarkProvider>
-            }
-          />
-        </Routes>
+        <BookmarkProvider>
+          <ProductsProvider>
+            <Routes>
+              <Route path="/" element={<Main />} />
+              <Route path="/products/list" element={<ProductList />} />
+            </Routes>
+          </ProductsProvider>
+          <Routes>
+            <Route path="/bookmark" element={<Bookmark />} />
+          </Routes>
+        </BookmarkProvider>
       </Router>
     </div>
   );
