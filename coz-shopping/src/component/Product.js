@@ -1,21 +1,38 @@
 import bookmarkOff from "../icon/북마크 아이콘 - off.png";
 import "../component/Product.css";
 
-function Product({ img, title, discountPercentage, price }) {
+function Product({
+  type,
+  title,
+  sub_title,
+  brand_name,
+  price,
+  discountPercentage,
+  image_url,
+  brand_image_url,
+  follower,
+}) {
   return (
     <div>
       <div>
-        <img className="product" src={img} alt="product" />
+        <img
+          className="product"
+          src={type === "Brand" ? brand_image_url : image_url}
+          alt="product"
+        />
         <img src={bookmarkOff} alt="bookmark" />
       </div>
       <div>
         <div>
-          <span>{title}</span>
-          <span>{discountPercentage}%</span>
+          <span>{type === "Brand" ? brand_name : title}</span>
+          <span>{type === "Product" ? `${discountPercentage}%` : null}</span>
         </div>
         <div>
-          <span></span>
-          <span>{price}원</span>
+          <span>{type === "Exhibition" ? sub_title : null}</span>
+          <span>
+            {type === "Brand" && follower}
+            {type === "Product" && `${price}원`}
+          </span>
         </div>
       </div>
     </div>
