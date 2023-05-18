@@ -7,8 +7,8 @@ function Modal({ setModal }) {
 
   return (
     <div>
-      <img src="" alt="상품" />
-      <img src="" alt="닫기" onClick={handleCloseModal} />
+      <img src="!!:" alt="상품" />
+      <img src="!!:" alt="닫기" onClick={handleCloseModal} />
     </div>
   );
 }

@@ -5,7 +5,7 @@ import Header from "../component/Header";
 import Product from "../component/Product";
 import { ProuductsContext } from "../context/ProductsProvider";
 import Modal from "../component/Modal";
-// import { BookmarkContext } from "../context/BookmarkProvider";
+// :: import { BookmarkContext } from "../context/BookmarkProvider";
 
 const typeFilter = [
   { id: 0, type: "All", title: "전체" },
@@ -17,10 +17,11 @@ const typeFilter = [
 
 function Bookmark() {
   const products = useContext(ProuductsContext);
-  // const { bookmark, onClickBookmark } = useContext(BookmarkContext);
+  // :: const { bookmark, onClickBookmark } = useContext(BookmarkContext);
   const [modal, setModal] = useState(false);
   const [selectedType, setSelectedType] = useState("All");
 
+  // !!: type이 All일 때, 필터링되는 상품이 없음...
   const filterProducts = products.filter((product) => product.type === selectedType);
 
   const handleOpenModal = () => setModal(true);
