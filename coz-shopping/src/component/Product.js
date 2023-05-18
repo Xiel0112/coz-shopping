@@ -1,5 +1,6 @@
 import bookmarkOff from "../icon/북마크 아이콘 - off.png";
 import "../component/Product.css";
+import Modal from "./Modal";
 
 function Product({
   type,
@@ -12,6 +13,7 @@ function Product({
   brand_image_url,
   follower,
   handleOpenModal,
+  modal,
 }) {
   return (
     <div onClick={handleOpenModal}>
@@ -36,6 +38,7 @@ function Product({
           </span>
         </div>
       </div>
+      {modal && <Modal />}
     </div>
   );
 }
