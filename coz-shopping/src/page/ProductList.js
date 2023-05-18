@@ -13,6 +13,7 @@ const typeFilter = [
   { id: 3, type: "Exhibition", title: "기획전" },
   { id: 4, type: "Brand", title: "브랜드" },
 ];
+
 function ProductList() {
   const products = useContext(ProuductsContext);
   const [modal, setModal] = useState(false);
