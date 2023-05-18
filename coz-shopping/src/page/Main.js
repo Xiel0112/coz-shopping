@@ -4,6 +4,7 @@ import Header from "../component/Header";
 import Product from "../component/Product";
 import { ProuductsContext } from "../context/ProductsProvider";
 import Modal from "../component/Modal";
+import "../App.css";
 
 function Main() {
   const [modal, setModal] = useState(false);
@@ -18,7 +19,7 @@ function Main() {
       <Header />
       <main>
         <div>
-          <h2>상품 리스트</h2>
+          <h2 className="title-productList">상품 리스트</h2>
           <div>
             {productList.map((product, id) => (
               <Product

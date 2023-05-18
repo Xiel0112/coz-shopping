@@ -2,8 +2,6 @@
   box-sizing: border-box;
 
   border: 1px solid gray;
-
-  margin: auto;
 }
 
 .App {
@@ -18,4 +16,10 @@
   overflow-y: scroll;
 
   background-color: white;
+  margin: auto;
+}
+
+.title-productList {
+  height: 38px;
+  width: 179px;
 }

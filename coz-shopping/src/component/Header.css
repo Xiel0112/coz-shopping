@@ -1,5 +1,6 @@
 .header {
-  position: relative;
+  position: sticky;
+  top: 0px;
   width: 1280px;
   height: 80px;
 
