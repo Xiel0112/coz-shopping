@@ -35,7 +35,7 @@ function ProductList() {
           ))}
         </div>
         <div>
-          {products.map((product, id) => (
+          {filterProducts.map((product, id) => (
             <Product
               key={id}
               type={product.type}
