@@ -40,18 +40,7 @@ function ProductList() {
         </div>
         <div onClick={handleOpenModal}>
           {filterProducts.map((product, id) => (
-            <Product
-              key={id}
-              type={product.type}
-              title={product.title}
-              sub_title={product.sub_title}
-              brand_name={product.brand_name}
-              price={product.price}
-              discountPercentage={product.discountPercentage}
-              image_url={product.image_url}
-              brand_image_url={product.brand_image_url}
-              follower={product.follower}
-            />
+            <Product key={id} product={product} />
           ))}
         </div>
         {modal && <Modal setModal={setModal} />}

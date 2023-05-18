@@ -10,17 +10,15 @@ function App() {
   return (
     <div className="App">
       <Router>
-        <BookmarkProvider>
-          <ProductsProvider>
+        <ProductsProvider>
+          <BookmarkProvider>
             <Routes>
               <Route path="/" element={<Main />} />
               <Route path="/products/list" element={<ProductList />} />
+              <Route path="/bookmark" element={<Bookmark />} />
             </Routes>
-          </ProductsProvider>
-          <Routes>
-            <Route path="/bookmark" element={<Bookmark />} />
-          </Routes>
-        </BookmarkProvider>
+          </BookmarkProvider>
+        </ProductsProvider>
       </Router>
     </div>
   );

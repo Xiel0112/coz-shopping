@@ -56,7 +56,6 @@
 
 .product-name {
   height: 24px;
-  width: 214px;
   left: 0px;
   top: 216px;
   border-radius: nullpx;
@@ -64,7 +63,6 @@
 
 .product-disconutrate {
   height: 24px;
-  width: 50px;
   left: 214px;
   top: 216px;
   border-radius: nullpx;
@@ -72,7 +70,6 @@
 
 .product-detail {
   height: 24px;
-  width: 264px;
   left: 0px;
   top: 240px;
   border-radius: nullpx;
@@ -80,7 +77,6 @@
 
 .product-priceFollower {
   height: 24px;
-  width: 266px;
   left: 0px;
   top: 240px;
   border-radius: nullpx;

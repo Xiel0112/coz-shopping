@@ -22,7 +22,8 @@ function Bookmark() {
   const [selectedType, setSelectedType] = useState("All");
 
   // !!: type이 All일 때, 필터링되는 상품이 없음...
-  const filterProducts = products.filter((product) => product.type === selectedType);
+  const filterProducts =
+    selectedType === "All" ? products : products.filter((product) => product.type === selectedType);
 
   const handleOpenModal = () => setModal(true);
 
@@ -42,18 +43,7 @@ function Bookmark() {
         </div>
         <div onClick={handleOpenModal}>
           {filterProducts.map((product, id) => (
-            <Product
-              key={id}
-              type={product.type}
-              title={product.title}
-              sub_title={product.sub_title}
-              brand_name={product.brand_name}
-              price={product.price}
-              discountPercentage={product.discountPercentage}
-              image_url={product.image_url}
-              brand_image_url={product.brand_image_url}
-              follower={product.follower}
-            />
+            <Product key={id} product={product} />
           ))}
         </div>
         {modal && <Modal setModal={setModal} />}
