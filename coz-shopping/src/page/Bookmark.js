@@ -1,4 +1,4 @@
-import Classification from "../component/Classification";
+import FilterBtn from "../component/FilterBtn";
 import Footer from "../component/Footer";
 import Header from "../component/Header";
 import Product from "../component/Product";
@@ -9,7 +9,7 @@ function Bookmark() {
       <Header />
       <main>
         <div>
-          <Classification />
+          <FilterBtn />
         </div>
         <div>
           <Product />
