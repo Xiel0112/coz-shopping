@@ -7,13 +7,14 @@ import Modal from "../component/Modal";
 import { BookmarkContext } from "../context/BookmarkProvider";
 
 function Main() {
+  const [modal, setModal] = useState(false);
   const products = useContext(ProuductsContext);
   const bookmark = useContext(BookmarkContext);
   const { onClickBookmark } = useContext(BookmarkContext);
-  const [modal, setModal] = useState(false);
-  const productList = products.slice(0, 4);
 
   const handleOpenModal = () => setModal(true);
+
+  const productList = products.slice(0, 4);
 
   return (
     <div>
@@ -21,7 +22,7 @@ function Main() {
       <main>
         <div>
           <h2>상품 리스트</h2>
-          <div onClick={handleOpenModal}>
+          <div>
             {productList.map((product, id) => (
               <Product
                 key={id}
@@ -34,6 +35,7 @@ function Main() {
                 image_url={product.image_url}
                 brand_image_url={product.brand_image_url}
                 follower={product.follower}
+                handleOpenModal={handleOpenModal}
               />
             ))}
           </div>

@@ -11,10 +11,11 @@ function Product({
   image_url,
   brand_image_url,
   follower,
+  handleOpenModal,
 }) {
   return (
     <div>
-      <div>
+      <div onClick={handleOpenModal}>
         <img className="product" src={type === "Brand" ? brand_image_url : image_url} alt={title} />
         <img src={bookmarkOff} alt="bookmark" />
       </div>
@@ -31,6 +32,7 @@ function Product({
           </span>
         </div>
       </div>
+      <div></div>
     </div>
   );
 }
