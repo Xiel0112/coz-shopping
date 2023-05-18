@@ -19,8 +19,8 @@ function ProductList() {
   const [modal, setModal] = useState(false);
   const [selectedType, setSelectedType] = useState("All");
 
-  // !!: type이 All일 때, 필터링되는 상품이 없음...
-  const filterProducts = products.filter((product) => product.type === selectedType);
+  const filterProducts =
+    selectedType === "All" ? products : products.filter((product) => product.type === selectedType);
 
   const handleOpenModal = () => setModal(true);
 
@@ -54,7 +54,7 @@ function ProductList() {
             />
           ))}
         </div>
-        {modal && <Modal setModal={setModal}/>}
+        {modal && <Modal setModal={setModal} />}
       </main>
       <Footer />
     </div>

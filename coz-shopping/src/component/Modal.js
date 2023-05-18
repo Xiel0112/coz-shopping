@@ -1,5 +1,4 @@
 // ??: setModal은 어디서 전달된 것인가...
-
 function Modal({ setModal }) {
   const handleCloseModal = () => {
     setModal(false);

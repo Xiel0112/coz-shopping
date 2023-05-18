@@ -4,7 +4,7 @@ import Header from "../component/Header";
 import Product from "../component/Product";
 import { ProuductsContext } from "../context/ProductsProvider";
 import Modal from "../component/Modal";
-import "../App.css";
+import "../page/Main.css";
 
 function Main() {
   const [modal, setModal] = useState(false);
@@ -31,7 +31,8 @@ function Main() {
               discountPercentage={product.discountPercentage}
               image_url={product.image_url}
               brand_image_url={product.brand_image_url}
-              follower={product.follower}
+              // follower={product.follower}
+              product={product}
               handleOpenModal={handleOpenModal}
             />
           ))}
