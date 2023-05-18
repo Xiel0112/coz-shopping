@@ -3,7 +3,7 @@ import Footer from "../component/Footer";
 import Header from "../component/Header";
 import Product from "../component/Product";
 import { ProuductsContext } from "../context/ProductsProvider";
-// import Modal from "../component/Modal";
+import Modal from "../component/Modal";
 
 function Main() {
   const products = useContext(ProuductsContext);
@@ -18,7 +18,7 @@ function Main() {
       <main>
         <div>
           <h2>상품 리스트</h2>
-          <div>
+          <div onClick={handleOpenModal}>
             {productList.map((product, id) => (
               <Product
                 key={id}
@@ -31,11 +31,10 @@ function Main() {
                 image_url={product.image_url}
                 brand_image_url={product.brand_image_url}
                 follower={product.follower}
-                handleOpenModal={handleOpenModal}
-                modal={modal}
               />
             ))}
           </div>
+          {modal && <Modal setModal={setModal} />}
         </div>
         <div>
           <h2>북마크 리스트</h2>

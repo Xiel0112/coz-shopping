@@ -1,6 +1,5 @@
 import bookmarkOff from "../icon/북마크 아이콘 - off.png";
 import "../component/Product.css";
-import Modal from "./Modal";
 
 function Product({
   type,
@@ -12,11 +11,9 @@ function Product({
   image_url,
   brand_image_url,
   follower,
-  handleOpenModal,
-  modal,
 }) {
   return (
-    <div onClick={handleOpenModal}>
+    <div>
       <div>
         <img className="product" src={type === "Brand" ? brand_image_url : image_url} alt={title} />
         <img src={bookmarkOff} alt="bookmark" />
@@ -34,7 +31,6 @@ function Product({
           </span>
         </div>
       </div>
-      {modal && <Modal />}
     </div>
   );
 }
