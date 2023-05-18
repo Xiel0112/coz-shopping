@@ -1,0 +1,21 @@
+* {
+  box-sizing: border-box;
+
+  border: 1px solid gray;
+
+  margin: auto;
+}
+
+.App {
+  display: flex;
+  align-items: center;
+  padding: 0px;
+  gap: 24px;
+
+  position: relative;
+  width: 1280px;
+  height: 832px;
+  overflow-y: scroll;
+
+  background-color: white;
+}

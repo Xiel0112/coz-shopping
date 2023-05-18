@@ -1,4 +1,106 @@
 .header {
-  position: sticky;
-  top: 0;
+  position: relative;
+  width: 1280px;
+  height: 80px;
+
+  background: #ffffff;
+  box-shadow: 0px 8px 8px rgba(0, 0, 0, 0.1);
+}
+
+.header__logo {
+  position: absolute;
+  top: 25px;
+  left: 76px;
+}
+
+.header_storeName {
+  position: absolute;
+  top: 25.19px;
+  left: 143px;
+
+  font-family: "Inter";
+  font-weight: 700;
+  font-size: 32px;
+  line-height: 88.02%;
+  /* or 28px */
+
+  display: flex;
+  align-items: center;
+
+  color: #000000;
+}
+
+.header__menu {
+  position: absolute;
+  top: 30px;
+  right: 78px;
+}
+
+.modal {
+  position: absolute;
+  width: 200px;
+  height: 150px;
+  top: 70px;
+  right: 32px;
+
+  background-color: white;
+}
+
+.modal-welcome {
+  position: absolute;
+  width: 180px;
+  height: 25px;
+  top: 13px;
+  left: 10px;
+
+  text-align: center;
+}
+
+.modal__productList {
+  position: absolute;
+  height: 50px;
+  width: 200px;
+  left: 0px;
+  top: 50px;
+
+  border-radius: 0px;
+}
+
+.productList-icon {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  top: 15px;
+  left: 24px;
+}
+
+.productList-text {
+  position: absolute;
+  width: 140px;
+  height: 25px;
+  top: 13px;
+  left: 52px;
+}
+
+.modal__bookmark {
+  position: absolute;
+  width: 200px;
+  height: 50px;
+  top: 100px;
+}
+
+.bookmark-icon {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  top: 15px;
+  left: 24px;
+}
+
+.bookmark-text {
+  position: absolute;
+  width: 140px;
+  height: 25px;
+  top: 13px;
+  left: 52px;
 }
