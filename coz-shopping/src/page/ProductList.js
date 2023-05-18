@@ -16,8 +16,7 @@ const typeFilter = [
 function ProductList() {
   const products = useContext(ProuductsContext);
   const [modal, setModal] = useState(false);
-
-  const handleOpenModal = () => setModal(true);
+  const [selectedType, setSelectedType] = useState("All");
 
   return (
     <div>
@@ -25,10 +24,15 @@ function ProductList() {
       <main>
         <div>
           {typeFilter.map((type, id) => (
-            <FilterBtn key={id} title={type.title} />
+            <FilterBtn
+              key={id}
+              type={type.type}
+              title={type.title}
+              setSelectedType={setSelectedType}
+            />
           ))}
         </div>
-        <div onClick={handleOpenModal}>
+        <div>
           {products.map((product, id) => (
             <Product
               key={id}

@@ -1,6 +1,8 @@
-function FilterBtn({ title }) {
+function FilterBtn({ type, title, setSelectedType }) {
+  const handleselectedType = () => setSelectedType(type);
+
   return (
-    <div>
+    <div onClick={handleselectedType}>
       <img src="!!:" alt="카테고리" />
       <div>{title}</div>
     </div>
