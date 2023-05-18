@@ -3,9 +3,6 @@ import Footer from "../component/Footer";
 import Header from "../component/Header";
 import Product from "../component/Product";
 import { ProuductsContext } from "../context/ProductsProvider";
-import ProductBrand from "../component/ProductBrand";
-import ProductExhibition from "../component/ProductExhibition";
-import ProductCategory from "../component/ProductCategory";
 import Modal from "../component/Modal";
 
 function Main() {
