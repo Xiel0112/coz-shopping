@@ -11,9 +11,10 @@ function Product({
   image_url,
   brand_image_url,
   follower,
+  handleOpenModal,
 }) {
   return (
-    <div>
+    <div onClick={handleOpenModal}>
       <div>
         <img
           className="product"
