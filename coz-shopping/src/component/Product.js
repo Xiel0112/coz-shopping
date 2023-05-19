@@ -1,9 +1,14 @@
+import { useContext } from "react";
 import bookmarkOff from "../icon/북마크 아이콘 - off.png";
+import bookmarkOn from "../icon/북마크 아이콘 - on.png";
 import "../component/Product.css";
+import { BookmarkContext } from "../context/BookmarkProvider";
 
-function Product({
-  handleOpenModal,
-  product: {
+function Product({ handleOpenModal, product }) {
+  const { bookmark, onClickBookmark } = useContext(BookmarkContext);
+
+  const {
+    id,
     type,
     title,
     sub_title,
@@ -13,8 +18,8 @@ function Product({
     image_url,
     brand_image_url,
     follower,
-  },
-}) {
+  } = product;
+
   return (
     <div className="products">
       <div className="product">
@@ -24,7 +29,12 @@ function Product({
             src={type === "Brand" ? brand_image_url : image_url}
             alt={title}
           />
-          <img className="img-bookmark" src={bookmarkOff} alt="bookmark" />
+          <img
+            className="img-bookmark"
+            src={bookmark.hasOwnProperty(id) ? bookmarkOn : bookmarkOff}
+            alt="bookmark"
+            onClick={() => onClickBookmark(product)}
+          />
         </div>
         <div className="product-info">
           <span className="product-name">{type === "Brand" ? brand_name : title}</span>

@@ -5,10 +5,13 @@ import Product from "../component/Product";
 import { ProuductsContext } from "../context/ProductsProvider";
 import Modal from "../component/Modal";
 import "../page/Main.css";
+import { BookmarkContext } from "../context/BookmarkProvider";
 
 function Main() {
   const [modal, setModal] = useState(false);
   const products = useContext(ProuductsContext);
+  const bookmark = useContext(BookmarkContext);
+  const { onClickBookmark } = useContext(BookmarkContext);
 
   const handleOpenModal = () => setModal(true);
 
@@ -21,7 +24,12 @@ function Main() {
         <h2 className="product-list-title">상품 리스트</h2>
         <div className="product-list__products">
           {productList.map((product, id) => (
-            <Product key={id} product={product} handleOpenModal={handleOpenModal} />
+            <Product
+              key={id}
+              product={product}
+              handleOpenModal={handleOpenModal}
+              onClickBookmark={onClickBookmark}
+            />
           ))}
         </div>
         {modal && <Modal setModal={setModal} />}
