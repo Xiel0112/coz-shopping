@@ -4,7 +4,7 @@ import Footer from "../component/Footer";
 import Header from "../component/Header";
 import Product from "../component/Product";
 import { ProuductsContext } from "../context/ProductsProvider";
-import Modal from "../component/Modal";
+import "./ProductList.css";
 
 const typeFilter = [
   { id: 0, type: "All", title: "전체" },
@@ -16,19 +16,16 @@ const typeFilter = [
 
 function ProductList() {
   const products = useContext(ProuductsContext);
-  const [modal, setModal] = useState(false);
   const [selectedType, setSelectedType] = useState("All");
 
   const filterProducts =
     selectedType === "All" ? products : products.filter((product) => product.type === selectedType);
 
-  const handleOpenModal = () => setModal(true);
-
   return (
     <div>
       <Header />
       <main>
-        <div>
+        <div className="Productstype">
           {typeFilter.map((type, id) => (
             <FilterBtn
               key={id}
@@ -38,12 +35,11 @@ function ProductList() {
             />
           ))}
         </div>
-        <div onClick={handleOpenModal}>
+        <div className="ProductsList">
           {filterProducts.map((product, id) => (
             <Product key={id} product={product} />
           ))}
         </div>
-        {modal && <Modal setModal={setModal} />}
       </main>
       <Footer />
     </div>

@@ -1,0 +1,17 @@
+.Productstype {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+
+  height: 100px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  text-align: center;
+}
+
+.ProductsList {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+}
