@@ -55,7 +55,7 @@ function Product({ product }) {
           </span>
         </div>
       </div>
-      {modal && <Modal setModal={setModal} />}
+      {modal && <Modal setModal={setModal} img={type === "Brand" ? brand_image_url : image_url} />}
     </div>
   );
 }

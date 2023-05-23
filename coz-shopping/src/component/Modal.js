@@ -1,12 +1,11 @@
-// ??: setModal은 어디서 전달된 것인가...
-function Modal({ setModal }) {
+function Modal({ setModal, img }) {
   const handleCloseModal = () => {
     setModal(false);
   };
 
   return (
     <div>
-      <img src="!!:" alt="상품" />
+      <img src={img} alt="상품" />
       <img src="!!:" alt="닫기" onClick={handleCloseModal} />
     </div>
   );

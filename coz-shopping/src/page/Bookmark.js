@@ -5,7 +5,7 @@ import Header from "../component/Header";
 import Product from "../component/Product";
 import { ProuductsContext } from "../context/ProductsProvider";
 import Modal from "../component/Modal";
-// :: import { BookmarkContext } from "../context/BookmarkProvider";
+import "./Bookmark.css";
 
 const typeFilter = [
   { id: 0, type: "All", title: "전체" },
