@@ -4,7 +4,7 @@ import Footer from "../component/Footer";
 import Header from "../component/Header";
 import Product from "../component/Product";
 import { ProuductsContext } from "../context/ProductsProvider";
-import "./ProductList.css";
+import "./List.css";
 
 const typeFilter = [
   { id: 0, type: "All", title: "전체" },
@@ -22,7 +22,7 @@ function ProductList() {
     selectedType === "All" ? products : products.filter((product) => product.type === selectedType);
 
   return (
-    <div className="productsList">
+    <div className="list">
       <Header />
       <main className="productsList__content">
         <div className="content__fillter-type">

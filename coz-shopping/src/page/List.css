@@ -1,4 +1,5 @@
-.productsList {
+.list {
+  width: 1280px;
   overflow-y: scroll;
 
   background: #ffffff;

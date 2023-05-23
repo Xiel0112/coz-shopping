@@ -3,8 +3,8 @@ import FilterBtn from "../component/FilterBtn";
 import Footer from "../component/Footer";
 import Header from "../component/Header";
 import Product from "../component/Product";
-import { ProuductsContext } from "../context/ProductsProvider";
-import "./ProductList.css";
+import "./List.css";
+import { BookmarkContext } from "../context/BookmarkProvider";
 
 const typeFilter = [
   { id: 0, type: "All", title: "전체" },
@@ -15,11 +15,14 @@ const typeFilter = [
 ];
 
 function ProductList() {
-  const products = useContext(ProuductsContext);
+  const { bookmarkArr } = useContext(BookmarkContext);
+
   const [selectedType, setSelectedType] = useState("All");
 
-  const filterProducts =
-    selectedType === "All" ? products : products.filter((product) => product.type === selectedType);
+  const filterBookmark =
+    selectedType === "All"
+      ? bookmarkArr
+      : bookmarkArr.filter((product) => product.type === selectedType);
 
   return (
     <div className="productsList">
@@ -36,7 +39,7 @@ function ProductList() {
           ))}
         </div>
         <div className="content__list">
-          {filterProducts.map((product, id) => (
+          {filterBookmark.map((product, id) => (
             <Product key={id} product={product} />
           ))}
         </div>
