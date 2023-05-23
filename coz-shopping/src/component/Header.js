@@ -21,7 +21,7 @@ function Header() {
           <img className="productList-icon" src={product} alt="상품" />
           상품 리스트
         </Link>
-        <Link className="dropdown-list" to={"/products/list"}>
+        <Link className="dropdown-list" to={"/bookmark"}>
           <img className="bookmark-icon" src={bookmark} alt="북마크" />
           북마크
         </Link>

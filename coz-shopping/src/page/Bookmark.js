@@ -4,8 +4,7 @@ import Footer from "../component/Footer";
 import Header from "../component/Header";
 import Product from "../component/Product";
 import { ProuductsContext } from "../context/ProductsProvider";
-import Modal from "../component/Modal";
-import "./Bookmark.css";
+import "./ProductList.css";
 
 const typeFilter = [
   { id: 0, type: "All", title: "전체" },
@@ -15,22 +14,18 @@ const typeFilter = [
   { id: 4, type: "Brand", title: "브랜드" },
 ];
 
-function Bookmark() {
+function ProductList() {
   const products = useContext(ProuductsContext);
-  const [modal, setModal] = useState(false);
   const [selectedType, setSelectedType] = useState("All");
 
-  // !!: type이 All일 때, 필터링되는 상품이 없음...
   const filterProducts =
     selectedType === "All" ? products : products.filter((product) => product.type === selectedType);
 
-  const handleOpenModal = () => setModal(true);
-
   return (
-    <div>
+    <div className="productsList">
       <Header />
-      <main>
-        <div>
+      <main className="productsList__content">
+        <div className="content__fillter-type">
           {typeFilter.map((type, id) => (
             <FilterBtn
               key={id}
@@ -40,16 +35,15 @@ function Bookmark() {
             />
           ))}
         </div>
-        <div onClick={handleOpenModal}>
+        <div className="content__list">
           {filterProducts.map((product, id) => (
             <Product key={id} product={product} />
           ))}
         </div>
-        {modal && <Modal setModal={setModal} />}
       </main>
       <Footer />
     </div>
   );
 }
 
-export default Bookmark;
+export default ProductList;
