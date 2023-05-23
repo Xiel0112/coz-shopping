@@ -17,7 +17,6 @@ const typeFilter = [
 
 function Bookmark() {
   const products = useContext(ProuductsContext);
-  // :: const { bookmark, onClickBookmark } = useContext(BookmarkContext);
   const [modal, setModal] = useState(false);
   const [selectedType, setSelectedType] = useState("All");
 

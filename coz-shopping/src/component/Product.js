@@ -23,11 +23,12 @@ function Product({ handleOpenModal, product }) {
   return (
     <div className="products">
       <div className="product">
-        <div className="product__img" onClick={handleOpenModal}>
+        <div className="product__img">
           <img
             className="img-product"
             src={type === "Brand" ? brand_image_url : image_url}
             alt={title}
+            onClick={handleOpenModal}
           />
           <img
             className="img-bookmark"

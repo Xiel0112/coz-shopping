@@ -10,8 +10,6 @@ import { BookmarkContext } from "../context/BookmarkProvider";
 function Main() {
   const [modal, setModal] = useState(false);
   const products = useContext(ProuductsContext);
-  const bookmark = useContext(BookmarkContext);
-  const { onClickBookmark } = useContext(BookmarkContext);
 
   const handleOpenModal = () => setModal(true);
 
@@ -24,12 +22,7 @@ function Main() {
         <h2 className="product-list-title">상품 리스트</h2>
         <div className="product-list__products">
           {productList.map((product, id) => (
-            <Product
-              key={id}
-              product={product}
-              handleOpenModal={handleOpenModal}
-              onClickBookmark={onClickBookmark}
-            />
+            <Product key={id} product={product} handleOpenModal={handleOpenModal} />
           ))}
         </div>
         {modal && <Modal setModal={setModal} />}
