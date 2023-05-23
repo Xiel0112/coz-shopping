@@ -1,8 +1,4 @@
 .main {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-
   width: 1280px;
   height: 832px;
   overflow-y: scroll;
@@ -13,6 +9,8 @@
 .main__content {
   width: 1128px;
   height: 640px;
+
+  margin: 24px 76px;
 }
 
 .content-title {
@@ -21,9 +19,13 @@
 
   font-size: 24px;
   font-weight: 600;
+
+  margin: 0;
 }
 
 .content-poduct {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
+
+  margin-top: 12px;
 }

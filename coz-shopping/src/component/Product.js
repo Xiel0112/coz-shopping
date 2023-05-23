@@ -25,35 +25,34 @@ function Product({ product }) {
   } = product;
 
   return (
-    <div className="products">
-      <div className="product">
-        <div className="product__img">
-          <img
-            className="img-product"
-            src={type === "Brand" ? brand_image_url : image_url}
-            alt={title}
-            onClick={handleOpenModal}
-          />
-          <img
-            className="img-bookmark"
-            src={bookmark.hasOwnProperty(id) ? bookmarkOn : bookmarkOff}
-            alt="bookmark"
-            onClick={() => onClickBookmark(product)}
-          />
-        </div>
-        <div className="product-info">
-          <span className="product-name">{type === "Brand" ? brand_name : title}</span>
-          <span className="product-disconutrate">
-            {type === "Product" ? `${discountPercentage}%` : null}
-          </span>
-        </div>
-        <div className="product-info">
-          <span className="product-detail">{type === "Exhibition" ? sub_title : null}</span>
-          <span className="product-priceFollower">
-            {type === "Brand" && follower}
-            {type === "Product" && `${price}원`}
-          </span>
-        </div>
+    <div className="product">
+      <div className="product__img">
+        <img
+          className="product-img"
+          src={type === "Brand" ? brand_image_url : image_url}
+          alt={title}
+          onClick={handleOpenModal}
+        />
+        <img
+          className="bookmark-img"
+          src={bookmark.hasOwnProperty(id) ? bookmarkOn : bookmarkOff}
+          alt="bookmark"
+          onClick={() => onClickBookmark(product)}
+        />
+      </div>
+      <div className="product__info">
+        <span className="product-name">{type === "Brand" ? brand_name : title}</span>
+        <span className="product-disconutrate">
+          {type === "Product" ? `${discountPercentage}%` : null}
+          {type === "Brand" ? "관심고객수" : null}
+        </span>
+      </div>
+      <div className="product__info">
+        <span className="product-detail">{type === "Exhibition" ? sub_title : null}</span>
+        <span className="product-price">
+          {type === "Brand" && `${follower}명`}
+          {type === "Product" && `${price}원`}
+        </span>
       </div>
       {modal && <Modal setModal={setModal} img={type === "Brand" ? brand_image_url : image_url} />}
     </div>

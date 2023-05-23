@@ -4,7 +4,6 @@ import Header from "../component/Header";
 import Product from "../component/Product";
 import { ProuductsContext } from "../context/ProductsProvider";
 import "../page/Main.css";
-import { BookmarkContext } from "../context/BookmarkProvider";
 
 function Main() {
   const products = useContext(ProuductsContext);
@@ -21,8 +20,11 @@ function Main() {
             <Product key={id} product={product} />
           ))}
         </div>
-        <div>
-          <h2 className="content-title">북마크 리스트</h2>
+        <h2 className="content-title">북마크 리스트</h2>
+        <div className="content-poduct">
+          {productList.map((product, id) => (
+            <Product key={id} product={product} />
+          ))}
         </div>
       </main>
       <Footer />
