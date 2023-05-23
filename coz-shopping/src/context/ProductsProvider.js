@@ -7,7 +7,7 @@ export function ProductsProvider({ children }) {
   const [products, setProducts] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
 
-  // console.log("products:", products);
+  console.log("products:", products);
 
   useEffect(() => {
     (async () => {
