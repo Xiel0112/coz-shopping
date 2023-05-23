@@ -19,5 +19,6 @@
 .modal__close {
   position: absolute;
 
-  border-radius: 0px;
+  top: 10px;
+  right: 10px;
 }
