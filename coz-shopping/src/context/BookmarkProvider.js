@@ -4,6 +4,7 @@ export const BookmarkContext = createContext({});
 
 export function BookmarkProvider({ children }) {
   const [bookmark, setBookmark] = useState({});
+  const bookmarkArr = Object.values(bookmark);
 
   const onClickBookmark = (product) => {
     if (product.id in bookmark) {
@@ -18,9 +19,10 @@ export function BookmarkProvider({ children }) {
   };
 
   // console.log("bookmark:", bookmark);
+  // console.log("bookmarkArr01", bookmarkArr);
 
   return (
-    <BookmarkContext.Provider value={{ bookmark, onClickBookmark }}>
+    <BookmarkContext.Provider value={{ bookmark, onClickBookmark, bookmarkArr }}>
       {children}
     </BookmarkContext.Provider>
   );
