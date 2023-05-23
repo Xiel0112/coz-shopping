@@ -13,15 +13,15 @@ function Header() {
 
   const Dropdown = () => {
     return (
-      <div className="modal">
-        <div className="modal-welcome">
+      <div className="dropdown">
+        <div className="dropdown-welcome">
           <div className="welcome-text">○○○님, 안녕하세요!</div>
         </div>
-        <Link className="modal__productList" to={"/products/list"}>
+        <Link className="dropdown__productList" to={"/products/list"}>
           <img className="productList-icon" src={product} alt="상품" />
           <span className="productList-text">상품 리스트</span>
         </Link>
-        <Link className="modal__bookmark" to={"/products/list"}>
+        <Link className="dropdown__bookmark" to={"/products/list"}>
           <img className="bookmark-icon" src={bookmark} alt="북마크" />
           <span className="bookmark-text">북마크</span>
         </Link>

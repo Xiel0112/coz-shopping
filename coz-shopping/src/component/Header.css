@@ -50,7 +50,7 @@
   border-radius: 0px;
 }
 
-.modal {
+.dropdown {
   position: absolute;
   height: 150px;
   width: 200px;
@@ -59,9 +59,11 @@
   border-radius: 12px;
 
   background-color: white;
+
+  z-index: 1;
 }
 
-.modal-welcome {
+.dropdown-welcome {
   height: 50px;
   width: 200px;
   left: 0px;
@@ -82,7 +84,10 @@
   border-radius: nullpx;
 }
 
-.modal__productList {
+.dropdown__productList {
+  display: flex;
+  justify-content: center;
+
   position: absolute;
   height: 50px;
   width: 200px;
@@ -110,7 +115,7 @@
   border-radius: nullpx;
 }
 
-.modal__bookmark {
+.dropdown__bookmark {
   position: absolute;
   height: 50px;
   width: 200px;
