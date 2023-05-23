@@ -56,27 +56,23 @@
 
   padding: 13px 10px;
 
+  font-size: 16px;
   text-align: center;
 }
 
-.text {
-  font-size: 16px;
-  font-weight: 400;
-}
-
-.dropdown__productList {
-  display: flex;
-  justify-content: center;
-
-  position: absolute;
+.dropdown-list {
   height: 50px;
   width: 200px;
-  left: 0px;
-  top: 50px;
-  border-radius: 0px;
+
+  padding: 13px 10px;
 
   display: flex;
   align-items: center;
+
+  padding: 24px 15px;
+
+  font-size: 16px;
+  font-weight: 400;
 }
 
 .productList-icon {
@@ -93,18 +89,6 @@
   left: 52px;
   top: 63px;
   border-radius: nullpx;
-}
-
-.dropdown__bookmark {
-  position: absolute;
-  height: 50px;
-  width: 200px;
-  left: 0px;
-  top: 100px;
-  border-radius: 0px;
-
-  display: flex;
-  align-items: center;
 }
 
 .bookmark-icon {
