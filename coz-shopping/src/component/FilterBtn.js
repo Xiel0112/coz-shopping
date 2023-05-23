@@ -1,9 +1,11 @@
-function FilterBtn({ type, title, setSelectedType }) {
+import "../component/FilterBtn.css";
+
+function FilterBtn({ type, title, setSelectedType, image }) {
   const handleselectedType = () => setSelectedType(type);
 
   return (
-    <div onClick={handleselectedType}>
-      <img src="!!:" alt="카테고리" />
+    <div className="type-btn" onClick={handleselectedType}>
+      <img className="type-btn-img" src="!!:" alt="카테고리" />
       <div>{title}</div>
     </div>
   );
