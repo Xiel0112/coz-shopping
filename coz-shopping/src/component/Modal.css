@@ -1,0 +1,23 @@
+.modal {
+  height: 420px;
+  width: 528px;
+
+  top: 50%;
+  left: 50%;
+
+  transform: translate(-50%, -50%);
+
+  position: absolute;
+  z-index: 2;
+}
+
+.modal__img {
+  height: 420px;
+  width: 528px;
+}
+
+.modal__close {
+  position: absolute;
+
+  border-radius: 0px;
+}
