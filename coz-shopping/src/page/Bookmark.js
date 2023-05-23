@@ -25,7 +25,7 @@ function ProductList() {
       : bookmarkArr.filter((product) => product.type === selectedType);
 
   return (
-    <div className="productsList">
+    <div className="list">
       <Header />
       <main className="productsList__content">
         <div className="content__fillter-type">
