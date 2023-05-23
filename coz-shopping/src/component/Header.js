@@ -15,15 +15,15 @@ function Header() {
     return (
       <div className="dropdown">
         <div className="dropdown-welcome">
-          <div className="welcome-text">○○○님, 안녕하세요!</div>
+          <div className="text">○○○님, 안녕하세요!</div>
         </div>
         <Link className="dropdown__productList" to={"/products/list"}>
           <img className="productList-icon" src={product} alt="상품" />
-          <span className="productList-text">상품 리스트</span>
+          <span className="text">상품 리스트</span>
         </Link>
         <Link className="dropdown__bookmark" to={"/products/list"}>
           <img className="bookmark-icon" src={bookmark} alt="북마크" />
-          <span className="bookmark-text">북마크</span>
+          <span className="text">북마크</span>
         </Link>
       </div>
     );
