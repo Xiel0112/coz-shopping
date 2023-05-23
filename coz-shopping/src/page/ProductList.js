@@ -22,10 +22,10 @@ function ProductList() {
     selectedType === "All" ? products : products.filter((product) => product.type === selectedType);
 
   return (
-    <div>
+    <div className="productsList">
       <Header />
-      <main>
-        <div className="Productstype">
+      <main className="productsList__content">
+        <div className="content__fillter-type">
           {typeFilter.map((type, id) => (
             <FilterBtn
               key={id}
@@ -35,7 +35,7 @@ function ProductList() {
             />
           ))}
         </div>
-        <div className="ProductsList">
+        <div className="content__list">
           {filterProducts.map((product, id) => (
             <Product key={id} product={product} />
           ))}
