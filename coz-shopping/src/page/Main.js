@@ -8,7 +8,6 @@ import { BookmarkContext } from "../context/BookmarkProvider";
 
 function Main() {
   const products = useContext(ProuductsContext);
-  const bookmark = useContext(BookmarkContext);
 
   const productList = products.slice(0, 4);
 
