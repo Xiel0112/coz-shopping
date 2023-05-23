@@ -31,12 +31,14 @@ function Header() {
 
   return (
     <div className="header">
-      <Link className="header__logo" to={"/"}>
-        <img src={logo} alt="로고" />
-      </Link>
-      <Link className="header_storeName" to={"/"} style={{ textDecoration: "none" }}>
-        <div>COZ Shopping</div>
-      </Link>
+      <div className="header__logo">
+        <Link to={"/"}>
+          <img className="logo-img" src={logo} alt="로고" />
+        </Link>
+        <Link className="logo-storeName" to={"/"} style={{ textDecoration: "none" }}>
+          <div>COZ Shopping</div>
+        </Link>
+      </div>
       <img className="header__menu" src={menu} alt="메뉴" onClick={handleDropDown} />
       {dropdown && <Dropdown />}
     </div>

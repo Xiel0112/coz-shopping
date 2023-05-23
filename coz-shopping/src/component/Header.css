@@ -2,43 +2,31 @@
   position: sticky;
   top: 0px;
 
-  height: 80px;
-  width: 1280px;
-  border-radius: 0px;
+  padding: 25px 76px;
 
   background-color: white;
 
   z-index: 1;
+
+  display: flex;
+  justify-content: space-between;
 }
 
 .header__logo {
-  position: absolute;
-  height: 30px;
-  width: 55px;
-  left: 76px;
-  top: 25px;
-  border-radius: 0px;
-}
-
-.header_storeName {
-  position: absolute;
-  height: 29.629629135131836px;
-  width: 230px;
-  left: 143px;
-  top: 25.1851806640625px;
-  border-radius: nullpx;
-
-  font-family: "Inter";
-  font-style: normal;
-  font-weight: 700;
-  font-size: 32px;
-  line-height: 88.02%;
-  /* or 28px */
-
   display: flex;
   align-items: center;
+}
 
-  color: #000000;
+.logo-img {
+  width: 55px;
+  height: 30px;
+}
+
+.logo-storeName {
+  font-weight: 700;
+  font-size: 32px;
+
+  margin-left: 12px;
 }
 
 .header__menu {
