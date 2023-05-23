@@ -1,11 +1,15 @@
-import { useContext } from "react";
+import { useContext, useState } from "react";
 import bookmarkOff from "../icon/북마크 아이콘 - off.png";
 import bookmarkOn from "../icon/북마크 아이콘 - on.png";
 import "../component/Product.css";
 import { BookmarkContext } from "../context/BookmarkProvider";
+import Modal from "./Modal";
 
-function Product({ handleOpenModal, product }) {
+function Product({ product }) {
+  const [modal, setModal] = useState(false);
   const { bookmark, onClickBookmark } = useContext(BookmarkContext);
+
+  const handleOpenModal = () => setModal(true);
 
   const {
     id,
@@ -51,6 +55,7 @@ function Product({ handleOpenModal, product }) {
           </span>
         </div>
       </div>
+      {modal && <Modal setModal={setModal} />}
     </div>
   );
 }
