@@ -4,7 +4,6 @@ import Header from "../component/Header";
 import Product from "../component/Product";
 import { ProuductsContext } from "../context/ProductsProvider";
 import "../page/Main.css";
-import { BookmarkContext } from "../context/BookmarkProvider";
 
 function Main() {
   const products = useContext(ProuductsContext);
